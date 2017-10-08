@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/port.png">
+    <title>Neeraj Sharma</title>    
+   
+    <style>
+        .site-wrapper{
+          background-image: url('assets/img/aboutcover.jpg');
+        }
+      
+        /*band file*/
+        navbar-collapse .container-fluid {
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid #55595c;
+}
+
+.navbar-collapse h4 {
+  color: #818a91;
+}
+
+.navbar-collapse .text-muted {
+  color: #818a91;
+}
+
+.about {
+  float: left;
+  max-width: 30rem;
+  margin-right: 3rem;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-color: #fff;
+  background-image: url("assets/img/aboutcover.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+  padding: 2rem;
+  color: white;
+}
+
+.jumbotron p {
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.album {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+  max-width: 100%;
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+    </style>
+</head>
+<body>
+    
+<div class="container">
+  <div class="masthead clearfix">
+            <div class="container inner">
+              <!-- <h3 class="masthead-brand"><kbd class="bg-danger"><a href="https://plus.google.com/u/0/+neerajsharma" target="_blank">Neeraj Sharma</a></kbd></h3> -->
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li ><a href="index.html">Home</a></li>
+                  <li class="active"><a href="about.html">About Me</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="achieve.html">Achievement</a></li>
+                </ul>
+              </nav>
+            </div>
+</div>
+</div>
+
+    <section class="jumbotron text-center">
+         <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading" style="font-family:saira-bold;">You'll fall in <span style="color:red;">love</span> with me at the first sight</h1>
+        <p class="lead" style="font-family:sedgwick;"><b>I smile in the mirror and I do that every morning and I'll start to see a big difference in my life.</b></p>
+        
+      </div>
+    </section>
+    </section>
+
+<div class="album text-muted">
+        <div class="container">
+          <h2 style="font-family:saire;">My photo gallery</h2>
+          <p>Take a look at my personal moment, enjoy</p><br><br>
+            <div class="row">
+                <div class="card">
+                    <img src="assets/img/card1.jpg" alt="Guitar" class="img-responsive">
+                    <p class="card-text">Today I choose life. Every morning when I wake up I can choose joy, happiness.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/img/card2.jpg" alt="A woman playing a guitar" class="img-responsive" >
+                    <p class="card-text">Death is not the greatest loss in life. The greatest loss is what dies inside us while we live..</p>
+                </div>
+                <div class="card">
+                    <img src="assets/img/card3.jpg" alt="Microphone" class="img-responsive">
+                    <p class="card-text">The good life is one inspired by love and guided by knowledge.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#" style="color:black;">Back to top</a>
+        </p>
+        <h3 class="text-primary" style="font-family:saira-bold;">Live Long Hard breath together.</h3>
+      </div>
+    </footer>
+
+ <!-- Audio File -->
+ <audio preload="auto" src="assets/audio/audio.mp3" loop="true" autobuffer>
+  Unsupported in Firefox
+  </audio>
+  
+  <script>
+  
+  function setCookie(c_name,value,exdays)
+  {
+      var exdate=new Date();
+      exdate.setDate(exdate.getDate() + exdays);
+      var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+      document.cookie=c_name + "=" + c_value;
+  }
+  
+  function getCookie(c_name)
+  {
+      var i,x,y,ARRcookies=document.cookie.split(";");
+      for (i=0;i<ARRcookies.length;i++)
+      {
+        x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+        y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+        x=x.replace(/^\s+|\s+$/g,"");
+        if (x==c_name)
+          {
+          return unescape(y);
+          }
+        }
+  }
+  
+  var song = document.getElementsByTagName('audio')[0];
+  var played = false;
+  var tillPlayed = getCookie('timePlayed');
+  function update()
+  {
+      if(!played){
+          if(tillPlayed){
+          song.currentTime = tillPlayed;
+          song.play();
+          played = true;
+          }
+          else {
+                  song.play();
+                  played = true;
+          }
+      }
+  
+      else {
+      setCookie('timePlayed', song.currentTime);
+      }
+  }
+  setInterval(update,1000);
+  </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+ <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>
